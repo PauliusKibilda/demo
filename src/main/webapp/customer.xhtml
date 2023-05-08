@@ -7,7 +7,7 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h2>Customers:</h2>
+    <h2>Customers in #{customers.store.name}:</h2>
     <ol>
         <ui:repeat value="#{customers.store.customers}" var="customer">
             <li>
@@ -20,8 +20,8 @@
             </li>
         </ui:repeat>
         <h:form>
-            <h:inputText value="#{customers.customerToCreate.name}" required="true" />
-            <h:inputText value="#{customers.customerToCreate.phone}" required="true" />
+            <h:inputText a:placeholder="Name" value="#{customers.customerToCreate.name}" required="true" />
+            <h:inputText a:placeholder="Phone" value="#{customers.customerToCreate.phone}" required="true" />
             <h:commandButton value="Add new customer" actionListener="#{customers.createCustomer}"
                              action="#{'customer?faces-redirect=true&amp;storeId='.concat(customers.store.id)}">
                 <f:param name="storeId" value="#{customers.store.id}" />

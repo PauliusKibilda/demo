@@ -10,16 +10,18 @@ import lombok.Setter;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.enterprise.context.Dependent;
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Model;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.transaction.Transactional;
 import javax.transaction.UserTransaction;
 import java.util.List;
 import java.util.Map;
 
-@Dependent
-@Model
+@Named
+@RequestScoped
 public class Customers {
     @Inject
     private CustomerDAO customerDAO;
@@ -49,8 +51,6 @@ public class Customers {
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         long storeId = Long.parseLong(requestParameters.get("storeId"));
         this.store = storeDAO.findOne(storeId);
-        System.out.println("Name: " + customerToCreate.getName());
-        System.out.println("Phone: " + customerToCreate.getPhone());
     }
 
 //    @Transactional
