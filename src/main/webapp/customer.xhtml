@@ -17,6 +17,9 @@
                 <div style="display: inline-block; margin-left: 10px;">
                     <h:outputText value="#{customer.phone}" />
                 </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <h:link value="Redaguoti" outcome="CustomerEdit?id=#{customer.id}" />
+                </div>
             </li>
         </ui:repeat>
         <h:form>

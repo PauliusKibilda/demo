@@ -9,10 +9,11 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Alternative
 @ApplicationScoped
-public class CustomerDAO implements ICustomerDAO{
+public class AlternativeCustomerDAO implements ICustomerDAO{
     @Inject
     private EntityManager em;
 
@@ -44,6 +45,14 @@ public class CustomerDAO implements ICustomerDAO{
     public Store getStoreById(long storeId) {
         TypedQuery<Store> query = em.createNamedQuery("Store.findByStoreId", Store.class);
         query.setParameter("storeId", storeId);
-        return query.getSingleResult();
+        Store store = query.getSingleResult();
+
+        List<Customer> customers = store.getCustomers().stream()
+                .filter(c -> c.getPhone() != null && !c.getPhone().isEmpty())
+                .collect(Collectors.toList());
+
+        store.setCustomers(customers);
+
+        return store;
     }
 }

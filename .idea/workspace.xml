@@ -9,19 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="721a7a0e-2e4e-41eb-8b24-2a856c2842ec" name="Changes" comment="Added missing files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/CdiProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/MyBatisResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo/useCases/StoresMyBatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/myBatis/stores.xhtml" afterDir="false" />
+    <list default="true" id="721a7a0e-2e4e-41eb-8b24-2a856c2842ec" name="Changes" comment="finnished task">
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/interceptors/LoggedInvocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/interceptors/MethodLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/AlternativeCustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/ICustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/IStoreDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/SpecilizesStoreDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/StoreDAODecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/rest/ApiConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/rest/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/useCases/AsyncClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/useCases/CustomerEdit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/demo/useCases/GenerateAsync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/CustomerEdit.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/entities/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/entities/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/entities/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/entities/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/persistence/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/persistence/StoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/persistence/StoreDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/demo/useCases/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/useCases/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/useCases/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/useCases/Stores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/customer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customer.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +100,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="demo.persistence" />
+      <recent name="interceptors" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -270,7 +282,15 @@
       <workItem from="1683496282623" duration="227000" />
       <workItem from="1683496514789" duration="20000" />
       <workItem from="1683496540697" duration="946000" />
-      <workItem from="1683555644636" duration="651000" />
+      <workItem from="1683555644636" duration="2153000" />
+      <workItem from="1684664312031" duration="4360000" />
+      <workItem from="1684675875856" duration="495000" />
+      <workItem from="1684676377053" duration="2248000" />
+      <workItem from="1684678632347" duration="3116000" />
+      <workItem from="1684681755667" duration="5110000" />
+      <workItem from="1684687571698" duration="1779000" />
+      <workItem from="1684689360123" duration="8544000" />
+      <workItem from="1684761966614" duration="2370000" />
     </task>
     <task id="LOCAL-00001" summary="initial commint">
       <created>1683491777327</created>
@@ -286,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683491843201</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finnished task">
+      <created>1683557680400</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683557680400</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +322,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commint" />
     <MESSAGE value="Added missing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added missing files" />
+    <MESSAGE value="finnished task" />
+    <option name="LAST_COMMIT_MESSAGE" value="finnished task" />
   </component>
 </project>

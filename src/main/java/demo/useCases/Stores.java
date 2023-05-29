@@ -2,6 +2,8 @@ package demo.useCases;
 
 import demo.entities.Product;
 import demo.entities.Store;
+import demo.interceptors.LoggedInvocation;
+import demo.persistence.IStoreDAO;
 import demo.persistence.ProductDAO;
 import demo.persistence.StoreDAO;
 import lombok.Getter;
@@ -38,6 +40,7 @@ public class Stores {
 //    public void createStore(){
 //        this.storeDAO.persist(storeToCreate);
 //    }
+    @LoggedInvocation
     public void createStore(){
         try {
             utx.begin();

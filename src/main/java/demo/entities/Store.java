@@ -4,15 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Store.findAll", query = "select b from Store as b")
+        @NamedQuery(name = "Store.findAll", query = "select b from Store as b"),
+        @NamedQuery(name = "Store.findAllWithNonNullNameAndAddress", query = "SELECT s FROM Store s WHERE s.name IS NOT NULL AND s.address IS NOT NULL")
 })
 @Table(name = "STORE")
 @Getter @Setter
-public class Store {
+public class Store implements Serializable {
 
     public Store()
     {
